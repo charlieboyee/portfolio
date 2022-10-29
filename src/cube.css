@@ -1,0 +1,68 @@
+.cube{
+    position: relative;
+    font-size: 1.3em;
+    width: 2em;
+    height: 2em;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) perspective(1000px)
+}
+
+.cube .panel{
+    background-color:green;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+}
+.cube.open .panel{
+    border: white 1px solid
+}
+
+.cube.open .panel.bottom{
+    transform-origin: bottom;
+    animation: openDown 1s forwards;
+    
+}
+
+.cube.open .panel.right{
+    transform-origin: right;
+    animation: openRight 1s forwards;
+    animation-delay: 4s;
+}
+
+.cube.open .panel.left{
+    transform-origin: left;
+    animation: openLeft 1s forwards;
+    animation-delay: 2s;
+}
+
+.cube.open .panel.top{
+    transform-origin: top;
+    animation: openTop 1s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes openDown {
+    to{
+        transform: rotateX(-180deg);
+    }
+}
+
+@keyframes openRight {
+    to{
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes openLeft {
+    to{
+        transform: rotateY(-180deg);
+    }
+}
+
+@keyframes openTop {
+    to{
+        transform: rotateX(180deg);
+    }
+}

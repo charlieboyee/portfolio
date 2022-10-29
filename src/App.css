@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+.app{
+  min-height: 100%; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app .MuiTypography-root{
+  font-family: fantasy;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app .intro{
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.app .intro .MuiTypography-root#outer{
+  max-width: fit-content;
+	overflow: hidden;
+  white-space: nowrap;
+  animation: type 3s steps(50) forwards, blink 1s infinite;
+  border-right: 1px solid orange;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.app .intro .MuiButton-root{
+  margin-top: 5em
+}
+
+.app .cubeContainer{
+  font-size: 5em;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1400px){
+  .app .intro .MuiTypography-root#outer{
+    white-space: normal;
   }
 }
