@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from 'react';
-import { Button, IconButton, Switch } from '@mui/material';
+import { Button, IconButton, Switch, Paper, Typography } from '@mui/material';
 import BulbOn from './assets/lightBulbOn.png';
 import BulbOff from './assets/lightBulbOff.png';
 import './navBar.css';
@@ -15,22 +15,27 @@ const NavBar = () => {
 		colorMode.toggleColorMode();
 	}, [checked]);
 	return (
-		<nav component='nav'>
-			<Button sx={{ color: 'text.primary' }}>Contact</Button>
-			<Button sx={{ color: 'text.primary' }}>Projects</Button>
-			<Button sx={{ color: 'text.primary' }}>Stats</Button>
-			{checked ? (
-				<IconButton onClick={() => setChecked(!checked)} disableRipple>
-					<img src={BulbOn} alt='lightBulbOn' />
-				</IconButton>
-			) : (
-				<IconButton onClick={() => setChecked(!checked)} disableRipple>
-					<img src={BulbOff} alt='lightBulbOff' />
-				</IconButton>
-			)}
+		<Paper component='nav'>
+			<section>
+				<Typography>The Portfolio</Typography>
+			</section>
+			<section>
+				<Button variant='contained'>Contact</Button>
+				<Button variant='contained'>Projects</Button>
+				<Button variant='contained'>Stats</Button>
+				{checked ? (
+					<IconButton onClick={() => setChecked(!checked)} disableRipple>
+						<img src={BulbOn} alt='lightBulbOn' />
+					</IconButton>
+				) : (
+					<IconButton onClick={() => setChecked(!checked)} disableRipple>
+						<img src={BulbOff} alt='lightBulbOff' />
+					</IconButton>
+				)}
 
-			<Switch color='secondary' checked={checked} onChange={handleChange} />
-		</nav>
+				<Switch color='secondary' checked={checked} onChange={handleChange} />
+			</section>
+		</Paper>
 	);
 };
 

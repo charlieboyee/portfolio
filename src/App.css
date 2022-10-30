@@ -32,6 +32,33 @@
   height: 100vh;
 }
 
+.stats{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.stats .hexContainer{
+  position: relative;
+}
+.stats .hexagon{
+  clip-path: polygon(23% 9%, 77% 9%, 100% 50%, 76% 90%, 25% 90%, 0% 50%);
+  background: rgb(136,77,255);
+background: radial-gradient(circle, rgba(136,77,255,1) 0%, rgba(220,116,232,1) 50%, rgba(252,182,91,1) 100%);
+  width: 200px;
+  height: 200px;
+}
+
+.stats img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  scale: .5;
+}
+
 @media screen and (max-width: 1400px){
   .app .intro .MuiTypography-root#outer{
     white-space: normal;

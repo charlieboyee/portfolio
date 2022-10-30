@@ -28,6 +28,7 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    color: white
 }
 
 /* open */
@@ -57,7 +58,6 @@
     animation: openTop .5s forwards;
     animation-delay: 1.5s;
 }
-
 
 .cube.open .panel.bottom .MuiTypography-root{
     transform: rotateX(180deg) rotateZ(-45deg);
