@@ -56,15 +56,15 @@ const App = () => {
 					<section className='cubeContainer' ref={cubeSectionRef}>
 						<Cube />
 					</section>
-					{/* Populate projects (the important ones!) here */}
-					{/* <section className='onePiece'>
+
+					<section className='onePiece'>
 						<Button>Live Demo</Button>
 						<Button>Github</Button>
 					</section>
 					<section className='photoCacher'>
 						<Button>Live Demo</Button>
 						<Button>Github</Button>
-					</section> */}
+					</section>
 					<Footer />
 				</Paper>
 			</ThemeProvider>

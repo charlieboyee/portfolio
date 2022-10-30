@@ -33,7 +33,7 @@ export const getTheme = (mode) => ({
 					secondary: { main: '#FF7F00' },
 					text: { primary: '#000000' },
 					common: { black: '#000000', white: '#ffffff' },
-					background: { paper: '#f5f5f5' },
+					background: { paper: '#CFE2D3' },
 			  }),
 	},
 });

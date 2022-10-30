@@ -15,8 +15,11 @@ const Footer = () => {
 				</section>
 
 				<section className='socialLinks'>
-					<IconButton>
-						<GitHubIcon />
+					<IconButton href='https://github.com/' target='_blank'>
+						<GitHubIcon
+							href='https://www.linkedin.com/in/charles-park-484943160/'
+							target='_blank'
+						/>
 					</IconButton>
 					<IconButton>
 						<LinkedInIcon />
