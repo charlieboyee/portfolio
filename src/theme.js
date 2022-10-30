@@ -28,7 +28,7 @@ export const getTheme = (mode) => ({
 			  }
 			: {
 					primary: { main: '#1474F9' },
-
+					secondary: { main: '#FF7F00' },
 					background: { paper: '#f5f5f5' },
 			  }),
 	},

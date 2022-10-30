@@ -1,7 +1,8 @@
 import { useState, createContext, useMemo, useRef } from 'react';
 import { Button, Paper, Typography } from '@mui/material';
-import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { getTheme } from './theme';
+import Footer from './Footer';
 import Cube from './Cube';
 import './app.css';
 
@@ -53,6 +54,16 @@ const App = () => {
 					<section className='cubeContainer' ref={cubeSectionRef}>
 						<Cube />
 					</section>
+					{/* Populate projects (the important ones!) here */}
+					{/* <section className='onePiece'>
+						<Button>Live Demo</Button>
+						<Button>Github</Button>
+					</section>
+					<section className='photoCacher'>
+						<Button>Live Demo</Button>
+						<Button>Github</Button>
+					</section> */}
+					<Footer />
 				</Paper>
 			</ThemeProvider>
 		</ColorContext.Provider>
