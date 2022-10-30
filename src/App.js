@@ -4,13 +4,14 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { getTheme } from './theme';
 import Footer from './Footer';
 import Cube from './Cube';
+import NavBar from './NavBar';
 import './app.css';
 
-const ColorContext = createContext();
+export const ColorContext = createContext({ toggleColorMode: () => {} });
 const App = () => {
 	const cubeSectionRef = useRef();
 
-	const [mode, setMode] = useState('dark');
+	const [mode, setMode] = useState('light');
 
 	const colorMode = useMemo(
 		() => ({
@@ -32,6 +33,7 @@ const App = () => {
 		<ColorContext.Provider value={colorMode}>
 			<ThemeProvider theme={appTheme}>
 				<Paper className='app'>
+					<NavBar />
 					<section className='intro'>
 						<Typography id='outer' variant='h2'>
 							Hello, my name is{' '}
