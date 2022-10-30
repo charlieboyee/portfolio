@@ -6,7 +6,8 @@
     top: 50%;
     left: 50%;
     transform-style: preserve-3d;
-    transform: translate(-50%, -50%) perspective(1000px)
+    transform: translate(-50%, -50%) perspective(500px);
+    transform-origin:50% -25%
 }
 
 .cube .panel{
@@ -14,15 +15,23 @@
     width: 2em;
     height: 2em;
     position: absolute;
+    background: rgb(61,71,71);
+    background: linear-gradient(0deg, rgba(36,149,208,1) 0%,  rgba(61,71,71,1) 100%);
 }
+
+.cube.open{
+    transform: rotate(45deg);
+    transition: 1s ease-in 5s; 
+}
+
 .cube.open .panel{
-    border: white 1px solid
+    border: grey 1px solid;
+    
 }
 
 .cube.open .panel.bottom{
     transform-origin: bottom;
     animation: openDown 1s forwards;
-    
 }
 
 .cube.open .panel.right{
