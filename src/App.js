@@ -5,14 +5,14 @@ import { getTheme } from './theme';
 import Footer from './Footer';
 import Cube from './Cube';
 import NavBar from './NavBar';
-import Stats from './Stats';
+import TechStack from './TechStack';
 
 import './app.css';
 
 export const ColorContext = createContext({ toggleColorMode: () => {} });
 const App = () => {
 	const cubeSectionRef = useRef();
-
+	const techStackRef = useRef();
 	const [mode, setMode] = useState('light');
 
 	const colorMode = useMemo(
@@ -29,6 +29,10 @@ const App = () => {
 
 	const goToCube = () => {
 		cubeSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+	};
+
+	const goToTechStack = () => {
+		techStackRef.current.scrollIntoView({ behavior: 'smooth' });
 	};
 
 	return (
@@ -48,19 +52,27 @@ const App = () => {
 						<Button
 							size='large'
 							variant='outlined'
-							id='viewButton'
 							color='primary'
 							onClick={goToCube}
 						>
 							View my work
 						</Button>
+						<Button
+							size='large'
+							variant='outlined'
+							color='primary'
+							onClick={goToTechStack}
+						>
+							See what I can use
+						</Button>
+					</section>
+					<section className='techStack' ref={techStackRef}>
+						<TechStack />
 					</section>
 					<section className='cubeContainer' ref={cubeSectionRef}>
 						<Cube />
 					</section>
-					<section className='stats'>
-						<Stats />
-					</section>
+
 					<section className='onePiece'>
 						<Button>Live Demo</Button>
 						<Button>Github</Button>

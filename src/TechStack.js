@@ -5,9 +5,9 @@ import POSTGREsvg from './assets/postgresql.svg';
 import NODEsvg from './assets/nodejs.svg';
 import PYTHONsvg from './assets/python.svg';
 import RNATIVEpng from './assets/react-native.png';
-import './stats.css';
+import './techStack.css';
 
-const Stats = () => {
+const TechStack = () => {
 	const handleMouseEnter = (e) => {
 		let hexContainer = e.currentTarget;
 
@@ -101,4 +101,4 @@ const Stats = () => {
 	);
 };
 
-export default Stats;
+export default TechStack;
