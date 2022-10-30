@@ -5,10 +5,8 @@ import { getTheme } from './theme';
 import Footer from './Footer';
 import Cube from './Cube';
 import NavBar from './NavBar';
-import JSsvg from './assets/javascript.svg';
-import REACTsvg from './assets/react.svg';
-import POSTGRESsvg from './assets/postgresql.svg';
-import NODEsvg from './assets/nodejs.svg';
+import Stats from './Stats';
+
 import './app.css';
 
 export const ColorContext = createContext({ toggleColorMode: () => {} });
@@ -61,22 +59,7 @@ const App = () => {
 						<Cube />
 					</section>
 					<section className='stats'>
-						<div className='hexContainer'>
-							<div className='hexagon' />
-							<img src={JSsvg} alt='javascript' />
-						</div>
-						<div className='hexContainer'>
-							<div className='hexagon' />
-							<img src={REACTsvg} alt='react' />
-						</div>
-						<div className='hexContainer'>
-							<div className='hexagon' />
-							<img src={NODEsvg} alt='nodejs' />
-						</div>
-						<div className='hexContainer'>
-							<div className='hexagon' />
-							<img src={POSTGRESsvg} alt='postgres' />
-						</div>
+						<Stats />
 					</section>
 					<section className='onePiece'>
 						<Button>Live Demo</Button>

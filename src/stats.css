@@ -1,0 +1,75 @@
+
+.stats{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.stats .hexContainer{
+	position: relative;
+}
+
+
+.stats .hexagon{
+	clip-path: polygon(25% 9%, 75% 9%, 100% 50%, 75% 90%, 25% 90%, 0% 50%);
+	background: rgb(136,77,255);
+	background: radial-gradient(circle, rgba(136,77,255,1) 0%, rgba(220,116,232,1) 50%, rgba(252,182,91,1) 100%);
+	width: 200px;
+	height: 200px;
+	
+}
+
+ .stats .hexContainer:nth-child(2){
+	
+	position: relative;
+	top: 95px;
+	right: 35px
+
+}
+
+.stats .hexContainer:nth-child(3){
+	position: relative;
+	right: 75px
+}
+
+.stats .hexContainer:nth-child(4){
+	position: relative;
+	top: 95px;
+	right: 110px
+}
+
+.stats .hexContainer:nth-child(5){
+	position: relative;
+	right: 150px
+}  
+
+.stats .hexContainer:nth-child(6){
+	position: relative;
+	top: 95px;
+	right: 185px
+}  
+
+.stats img,
+.stats .MuiTypography-root{
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	scale: .5;
+}
+
+.stats .MuiTypography-root{
+	font-size: 4em;
+	text-align: center;
+}
+
+.stats .hexText{
+	opacity: 0;
+	transform: rotateY(180deg);
+}
+
+/* .stats .comingSoon{
+	opacity: 1;
+	
+} */
