@@ -20,34 +20,6 @@
     border: grey 1px solid;
 }
 
-.cube.open{
-    transform: rotate(45deg);
-    transition: 1s ease-in 5s; 
-}
-
-.cube.open .panel.bottom{
-    transform-origin: bottom;
-    animation: openDown 1s forwards;
-}
-
-.cube.open .panel.right{
-    transform-origin: right;
-    animation: openRight 1s forwards;
-    animation-delay: 4s;
-}
-
-.cube.open .panel.left{
-    transform-origin: left;
-    animation: openLeft 1s forwards;
-    animation-delay: 2s;
-}
-
-.cube.open .panel.top{
-    transform-origin: top;
-    animation: openTop 1s forwards;
-    animation-delay: 3s;
-}
-
 .cube .panel .MuiTypography-root{
     font-size: .3em;
     cursor: pointer;
@@ -58,26 +30,62 @@
     transform: translateY(-50%);
 }
 
+/* open */
+.cube.open{
+    transform: rotate(45deg);
+    transition: 1s ease-in 2.5s; 
+}
+.cube.open .panel.bottom{
+    transform-origin: bottom;
+    animation: openDown .5s forwards;
+}
+
+.cube.open .panel.right{
+    transform-origin: right;
+    animation: openRight .5s forwards;
+    animation-delay: 2s;
+}
+
+.cube.open .panel.left{
+    transform-origin: left;
+    animation: openLeft .5s forwards;
+    animation-delay: 1s;
+}
+
+.cube.open .panel.top{
+    transform-origin: top;
+    animation: openTop .5s forwards;
+    animation-delay: 1.5s;
+}
+
 
 .cube.open .panel.bottom .MuiTypography-root{
     transform: rotateX(180deg) rotateZ(-45deg);
     transform-origin: 65%;
+    transition: all 1s;
+    animation: showText 1s forwards;
+    opacity: 0;
 }
 
 .cube.open .panel.right .MuiTypography-root{
     transform: rotateY(180deg)  rotateZ(-45deg) translate(10%, -20%);
-    
+    animation: showText 1s forwards 2s;
+    opacity: 0;
 }
 
 .cube.open .panel.left .MuiTypography-root{
     transform: rotateY(180deg)  rotateZ(-45deg);
     transform-origin: 30%;
     margin-right: 0;
+    animation: showText 1s forwards 1s;
+    opacity: 0;
 }
 
 .cube.open .panel.top .MuiTypography-root{
     transform: rotateX(180deg)  rotateZ(-45deg);
     transform-origin: 70%;
+    animation: showText 1s forwards 1.5s;
+    opacity: 0;
 }
 
 .cube.open .panel.middle .MuiTypography-root{
@@ -85,6 +93,8 @@
     transform-origin: 25%
 }
 
+
+/* key frames */
 @keyframes openDown {
     to{
         transform: rotateX(-180deg);
@@ -94,6 +104,7 @@
 @keyframes openRight {
     to{
         transform: rotateY(180deg);
+        opacity: 1;
     }
 }
 
@@ -106,5 +117,14 @@
 @keyframes openTop {
     to{
         transform: rotateX(180deg);
+    }
+}
+
+@keyframes showText {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }

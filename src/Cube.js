@@ -15,14 +15,15 @@ const Cube = () => {
 			<div className='panel top'>
 				<Typography>Photo Cacher</Typography>
 			</div>
+
 			<div className='panel middle'>
 				<Typography>My Projects</Typography>
 			</div>
-			<div className='panel left'>
-				<Typography>One Piece</Typography>
-			</div>
 			<div className='panel right'>
 				<Typography>Coming Soon</Typography>
+			</div>
+			<div className='panel left'>
+				<Typography>One Piece</Typography>
 			</div>
 			<div className='panel bottom'>
 				{!open ? (
