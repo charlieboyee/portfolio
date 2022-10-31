@@ -30,6 +30,7 @@
 .app .cubeContainer{
   font-size: 5em;
   height: 100vh;
+  margin-bottom: 200px
 }
 
 @media screen and (max-width: 1400px){

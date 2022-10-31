@@ -78,7 +78,7 @@ const App = () => {
 						<RNProject />
 					</section>
 
-					<section className='project2' ref={project1Ref}>
+					<section className='project2'>
 						<OnePiece />
 					</section>
 					<Footer />

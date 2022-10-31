@@ -33,7 +33,7 @@
 
 /* open */
 .cube.open{
-    transform: rotate(45deg);
+    transform: rotate(45deg) ;
     transition: 1s ease-in 2.5s; 
 }
 .cube.open .panel.bottom{
