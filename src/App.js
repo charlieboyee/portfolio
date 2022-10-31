@@ -6,7 +6,7 @@ import Footer from './Footer';
 import Cube from './Cube';
 import NavBar from './NavBar';
 import TechStack from './TechStack';
-
+import { RNProject } from './projects/';
 import './app.css';
 
 export const ColorContext = createContext({ toggleColorMode: () => {} });
@@ -72,13 +72,8 @@ const App = () => {
 						<Cube />
 					</section>
 
-					<section className='onePiece'>
-						<Button>Live Demo</Button>
-						<Button>Github</Button>
-					</section>
-					<section className='photoCacher'>
-						<Button>Live Demo</Button>
-						<Button>Github</Button>
+					<section className='project1'>
+						<RNProject />
 					</section>
 					<Footer />
 				</Paper>
