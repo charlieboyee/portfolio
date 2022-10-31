@@ -10,11 +10,18 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding: 0 5%;
+    font-size: 1em;
 }
 
-.project1 .left #title{
-   text-align: center;
+.project1 .left .MuiDivider-root{
+    align-items: flex-start;
+
 }
+.project1 .left .MuiTypography-root{
+    text-align: center;
+}
+
 
 .project1 .left #title::after{
     content: 'Photo Cacher';
@@ -40,7 +47,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -49,7 +56,7 @@
     transform: perspective(1000px) rotateZ(20deg) rotateY(-20deg) rotateX(20deg); 
     aspect-ratio: 9/20;
     width: 250px;
-    height: 100%;
+
 }
 
 .project1 .phone .panel{
@@ -80,4 +87,11 @@
 
 .project1 .phone .panel.front .vidControls .MuiButton-root{
     z-index: 99;
+}
+
+@media screen and (max-width:1050px ){
+    .project1{
+        flex-direction: column;
+        overflow: auto;
+    }
 }

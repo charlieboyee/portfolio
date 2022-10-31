@@ -6,13 +6,15 @@ import Footer from './Footer';
 import Cube from './Cube';
 import NavBar from './NavBar';
 import TechStack from './TechStack';
-import { RNProject } from './projects/';
+import { OnePiece, RNProject } from './projects/';
 import './app.css';
 
 export const ColorContext = createContext({ toggleColorMode: () => {} });
 const App = () => {
 	const cubeSectionRef = useRef();
 	const techStackRef = useRef();
+	const project1Ref = useRef();
+
 	const [mode, setMode] = useState('light');
 
 	const colorMode = useMemo(
@@ -69,11 +71,15 @@ const App = () => {
 						<TechStack />
 					</section>
 					<section className='cubeContainer' ref={cubeSectionRef}>
-						<Cube />
+						<Cube project1Ref={project1Ref} />
 					</section>
 
-					<section className='project1'>
+					<section className='project1' ref={project1Ref}>
 						<RNProject />
+					</section>
+
+					<section className='project2' ref={project1Ref}>
+						<OnePiece />
 					</section>
 					<Footer />
 				</Paper>

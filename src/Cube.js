@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import './cube.css';
 
-const Cube = () => {
+const Cube = ({ project1Ref }) => {
 	const theme = useTheme();
 	const [open, setOpen] = useState('');
 	const openCube = () => {
@@ -13,7 +13,13 @@ const Cube = () => {
 	return (
 		<div className={`cube ${open}`}>
 			<div className='panel top'>
-				<Typography>Photo Cacher</Typography>
+				<Typography
+					onClick={() =>
+						project1Ref.current.scrollIntoView({ behavior: 'smooth' })
+					}
+				>
+					Photo Cacher
+				</Typography>
 			</div>
 
 			<div className='panel middle'>

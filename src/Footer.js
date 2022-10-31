@@ -27,7 +27,7 @@ const Footer = () => {
 				</section>
 			</div>
 
-			<Typography id='copyright' color='grey'>
+			<Typography variant='caption' id='copyright' color='grey'>
 				Charles Park <span>&#169;</span>
 			</Typography>
 		</div>

@@ -21,6 +21,6 @@
 
 .footer #copyright{
     font-size: .7em;
+    display: block;
     text-align: center;
-    padding: 12px
 }

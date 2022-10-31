@@ -5,8 +5,15 @@ nav{
     justify-content: space-between;
     align-items: center;
     z-index: 99;
-    padding:0 2%
+    padding:0 2%;
+    opacity: 0;
 }
+
+nav:hover{
+    transition: all .5s ease-in-out;
+    opacity: 1;
+}
+
 
 nav .MuiButton-root{
     margin: 0 12px;
