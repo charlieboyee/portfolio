@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Typography } from '@mui/material';
 import JSsvg from './assets/javascript.svg';
 import REACTsvg from './assets/react.svg';
@@ -8,37 +9,59 @@ import RNATIVEpng from './assets/react-native.png';
 import './techStack.css';
 
 const TechStack = () => {
+	const [bounceUp, setBounceUp] = useState('');
+	const [bounceDown, setBounceDown] = useState('');
+
 	const handleMouseEnter = (e) => {
 		let hexContainer = e.currentTarget;
 
 		hexContainer.style.transform = `scale(${1.5}) rotateY(${'180deg'})`;
 		hexContainer.style.transition = `all 1s ease-in-out`;
-		console.log(e.target.childNodes);
 		let img = e.target?.childNodes[1];
 		let text = e.target?.childNodes[2];
 
-		img.style.opacity = 0;
-		img.style.transition = `all 1s ease-in-out`;
+		if (img) {
+			img.style.opacity = 0;
+			img.style.transition = `all 1s ease-in-out`;
 
-		text.style.opacity = 1;
-		text.style.transition = `all 1s ease-in-out`;
+			text.style.opacity = 1;
+			text.style.transition = `all 1s ease-in-out`;
+		}
 	};
 
 	const handleMouseLeave = (e) => {
 		let hexContainer = e.currentTarget;
-
-		hexContainer.style.transform = `scale(${1}) rotateY(${'0deg'})`;
-
 		let img = e.target?.childNodes[1];
 		let text = e.target?.childNodes[2];
 
-		img.style.opacity = 1;
-		text.style.opacity = 0;
+		if (img) {
+			hexContainer.style.transform = `scale(${1}) rotateY(${'0deg'})`;
+			text.style.opacity = 0;
+			img.style.opacity = 1;
+		}
 	};
+
+	const handleScroll = () => {
+		if (
+			window.scrollY > window.innerHeight &&
+			window.scrollY < window.innerHeight + 100
+		) {
+			setBounceUp('bounceUp');
+			setBounceDown('bounceDown');
+			setTimeout(() => {
+				setBounceUp('');
+				setBounceDown('');
+			}, 2000);
+		}
+	};
+	useEffect(() => {
+		const listener = window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', listener);
+	}, []);
 	return (
 		<>
 			<div
-				className='hexContainer'
+				className={`hexContainer ${bounceUp}`}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}
 			>
@@ -50,7 +73,7 @@ const TechStack = () => {
 			</div>
 
 			<div
-				className='hexContainer'
+				className={`hexContainer ${bounceDown}`}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}
 			>
@@ -60,7 +83,7 @@ const TechStack = () => {
 			</div>
 
 			<div
-				className='hexContainer'
+				className={`hexContainer ${bounceUp}`}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}
 			>
@@ -70,7 +93,7 @@ const TechStack = () => {
 			</div>
 
 			<div
-				className='hexContainer'
+				className={`hexContainer ${bounceDown}`}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}
 			>
@@ -80,7 +103,7 @@ const TechStack = () => {
 			</div>
 
 			<div
-				className='hexContainer'
+				className={`hexContainer ${bounceUp}`}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}
 			>
@@ -89,7 +112,7 @@ const TechStack = () => {
 				<Typography className='hexText'>React Native</Typography>
 			</div>
 			<div
-				className='hexContainer'
+				className={`hexContainer ${bounceDown}`}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}
 			>

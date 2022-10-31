@@ -17,7 +17,6 @@ const App = () => {
 
 	const colorMode = useMemo(
 		() => ({
-			// The dark mode switch would invoke this method
 			toggleColorMode: () => {
 				setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
 			},
