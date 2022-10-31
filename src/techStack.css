@@ -74,6 +74,28 @@
 .techStack .hexContainer.bounceDown{
 	animation: bounceDown 1s forwards;
 }
+
+@keyframes bounceUp {
+	0%   { transform: translateY(0); }
+	50%  { transform: translateY(-100px) }
+	60%   { transform: translateY(0) }
+	75%{ transform: translateY(-15px); }
+	80%{ transform: translateY(0px); }
+	90%{ transform: translateY(-5px); }
+	100% { transform: translateY(0); }
+}
+
+@keyframes bounceDown {
+	0%   { transform: translateY(0); }
+	50%  { transform: translateY(100px) }
+	60%   { transform: translateY(0) }
+	75%{ transform: translateY(15px); }
+	80%{ transform: translateY(0px); }
+	90%{ transform: translateY(5px); }
+	100% { transform: translateY(0); }
+}
+
+
 @media screen and (max-width:600px) {
 	.techStack{
 		--cube-width: 75px;
@@ -146,22 +168,3 @@
 	} 
 };
 
-@keyframes bounceUp {
-	0%   { transform: translateY(0); }
-	50%  { transform: translateY(-100px) }
-	60%   { transform: translateY(0) }
-	75%{ transform: translateY(-15px); }
-	80%{ transform: translateY(0px); }
-	90%{ transform: translateY(-5px); }
-	100% { transform: translateY(0); }
-}
-
-@keyframes bounceDown {
-	0%   { transform: translateY(0); }
-	50%  { transform: translateY(100px) }
-	60%   { transform: translateY(0) }
-	75%{ transform: translateY(15px); }
-	80%{ transform: translateY(0px); }
-	90%{ transform: translateY(5px); }
-	100% { transform: translateY(0); }
-}
