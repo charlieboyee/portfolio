@@ -3,15 +3,16 @@ import { Button, Paper, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { getTheme } from './theme';
 import Footer from './Footer';
-import Cube from './Cube';
 import NavBar from './NavBar';
 import TechStack from './TechStack';
 import { OnePiece, RNProject } from './projects/';
+import projects from './projects/projects.json';
 import './app.css';
+import ProjectDisplayButton from './ProjectDisplayBUtton';
 
 export const ColorContext = createContext({ toggleColorMode: () => {} });
 const App = () => {
-	const cubeSectionRef = useRef();
+	const projectsList = useRef();
 	const techStackRef = useRef();
 	const project1Ref = useRef();
 
@@ -28,8 +29,8 @@ const App = () => {
 
 	const appTheme = useMemo(() => createTheme(getTheme(mode)), [mode]);
 
-	const goToCube = () => {
-		cubeSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+	const goToProjects = () => {
+		projectsList.current.scrollIntoView({ behavior: 'smooth' });
 	};
 
 	const goToTechStack = () => {
@@ -47,14 +48,14 @@ const App = () => {
 							<Typography color='primary' component='span' variant='h2'>
 								Charles
 							</Typography>
-							. &nbsp; I'm a full stack web developer.
+							. &nbsp; I'm a full stack developer.
 						</Typography>
 
 						<Button
 							size='large'
 							variant='outlined'
 							color='primary'
-							onClick={goToCube}
+							onClick={goToProjects}
 						>
 							View my work
 						</Button>
@@ -70,8 +71,13 @@ const App = () => {
 					<section className='techStack' ref={techStackRef}>
 						<TechStack />
 					</section>
-					<section className='cubeContainer' ref={cubeSectionRef}>
-						<Cube project1Ref={project1Ref} />
+					<section className='projectsList' ref={projectsList}>
+						<Typography>My Projects</Typography>
+						<div>
+							{projects.map((proj, key) => {
+								return <ProjectDisplayButton key={key} title={proj.title} />;
+							})}
+						</div>
 					</section>
 
 					<section className='project1' ref={project1Ref}>
@@ -81,6 +87,11 @@ const App = () => {
 					<section className='project2'>
 						<OnePiece />
 					</section>
+					{/* <section className='project2'>
+
+					nissan mock
+						<OnePiece />
+					</section> */}
 					<Footer />
 				</Paper>
 			</ThemeProvider>

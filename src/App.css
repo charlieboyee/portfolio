@@ -27,10 +27,15 @@
   margin-top: 5em
 }
 
-.app .cubeContainer{
-  font-size: 5em;
+.app .projectsList{
+  min-height: 100vh;
+  padding:0 5%
+}
+.app .projectsList div:first-of-type{
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  margin-bottom: 200px
+  justify-content: space-evenly;
 }
 
 @media screen and (max-width: 1400px){

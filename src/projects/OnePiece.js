@@ -1,7 +1,9 @@
+import './onePiece.css';
+
 const OnePiece = () => {
 	return (
 		<>
-			<div>oen peice</div>
+			<div>Nissan</div>
 		</>
 	);
 };
