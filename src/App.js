@@ -5,7 +5,7 @@ import { getTheme } from './theme';
 import Footer from './Footer';
 import NavBar from './NavBar';
 import TechStack from './TechStack';
-import { OnePiece, Nissan, RNProject } from './projects/';
+import { Nissan, RNProject } from './projects/';
 import projects from './projects/projects.json';
 import './app.css';
 import ProjectDisplayButton from './ProjectDisplayBUtton';
@@ -15,6 +15,7 @@ const App = () => {
 	const projectsList = useRef();
 	const techStackRef = useRef();
 	const project1Ref = useRef();
+	const project2Ref = useRef();
 
 	const [mode, setMode] = useState('light');
 
@@ -79,7 +80,7 @@ const App = () => {
 									<ProjectDisplayButton
 										key={key}
 										title={proj.title}
-										projectRefs={[project1Ref]}
+										projectRefs={[project1Ref, project2Ref]}
 										index={key}
 									/>
 								);
@@ -88,14 +89,12 @@ const App = () => {
 					</section>
 
 					<section className='project1' ref={project1Ref}>
-						<RNProject />
+						<RNProject project={projects[0]} />
 					</section>
-					{/* <section className='project2'>
-						<Nissan />
+
+					<section className='project2' ref={project2Ref}>
+						<Nissan project={projects[1]} />
 					</section>
-					<section className='project3'>
-						<OnePiece />
-					</section> */}
 
 					<Footer />
 				</Paper>

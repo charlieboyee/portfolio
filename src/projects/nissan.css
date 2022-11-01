@@ -1,19 +1,27 @@
 .project2{
     height: 100vh;
     display: flex;
-    padding: 0 5%
 }
 
 .project2 .right{
-    flex: 1
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    font-size: 1em;
 }
 
 .project2 .right .MuiDivider-root{
     align-items: flex-start;
+
 }
 .project2 .right .MuiTypography-root{
     text-align: center;
+    margin: 12px 0
 }
+
 
 .project2 .right #title::after{
     content: 'Nissan';
@@ -25,14 +33,31 @@
     margin-top: 24px
 }
 
-.project2 .right .buttonsContainer{
+
+.project2 .right .projectLinks{
     position: relative;
-    bottom: 13%;
+    bottom: 10%;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
 }
 
+.project2 .right .techUsed{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project2 .right .techUsed .MuiButton-root{
+    margin: 12px 0;
+}
+
+
 .project2 .left{
-    flex: 1
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }

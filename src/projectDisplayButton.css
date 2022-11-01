@@ -1,6 +1,7 @@
 .projectDisplayButton{
     width: fit-content;
     cursor: pointer;
+    text-align: center;
 }
 
 .projectDisplayButton:hover{
