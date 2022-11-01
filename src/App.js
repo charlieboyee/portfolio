@@ -72,10 +72,17 @@ const App = () => {
 						<TechStack />
 					</section>
 					<section className='projectsList' ref={projectsList}>
-						<Typography>My Projects</Typography>
+						<Typography variant='h1'>My Projects</Typography>
 						<div>
 							{projects.map((proj, key) => {
-								return <ProjectDisplayButton key={key} title={proj.title} />;
+								return (
+									<ProjectDisplayButton
+										key={key}
+										title={proj.title}
+										projectRefs={[project1Ref]}
+										index={key}
+									/>
+								);
 							})}
 						</div>
 					</section>
@@ -83,17 +90,13 @@ const App = () => {
 					<section className='project1' ref={project1Ref}>
 						<RNProject />
 					</section>
-					<section className='project2'>
+					{/* <section className='project2'>
 						<Nissan />
 					</section>
 					<section className='project3'>
 						<OnePiece />
-					</section>
-					{/* <section className='project2'>
-
-					nissan mock
-						<OnePiece />
 					</section> */}
+
 					<Footer />
 				</Paper>
 			</ThemeProvider>

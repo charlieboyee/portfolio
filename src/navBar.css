@@ -24,3 +24,7 @@ nav .MuiIconButton-root img{
     width: 24px;
     object-fit: contain;
 }
+
+nav .MuiSwitch-root{
+    display: none;
+}
