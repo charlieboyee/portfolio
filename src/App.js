@@ -38,7 +38,7 @@ const App = () => {
 	};
 
 	return (
-		<ColorContext.Provider value={colorMode}>
+		<ColorContext.Provider value={{ colorMode, mode }}>
 			<ThemeProvider theme={appTheme}>
 				<Paper className='app'>
 					<NavBar />

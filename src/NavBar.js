@@ -5,7 +5,7 @@ import BulbOff from './assets/lightBulbOff.png';
 import './navBar.css';
 import { ColorContext } from './App';
 const NavBar = () => {
-	const colorMode = useContext(ColorContext);
+	const { colorMode } = useContext(ColorContext);
 	const [checked, setChecked] = useState(false);
 	const handleChange = (e) => {
 		setChecked(e.target.checked);
