@@ -1,12 +1,13 @@
 import { Button, Divider, Chip, Typography } from '@mui/material';
-import './onePiece.css';
+import './nissan.css';
 
-const OnePiece = () => {
+const Nissan = () => {
 	return (
 		<>
-			<section className='left'>
+			<section className='left'></section>
+			<section className='right'>
 				<Typography id='title' variant='h1'>
-					One Piece
+					Nissan
 				</Typography>
 				<div className='buttonsContainer'>
 					<Button variant='contained'>Live Demo</Button>
@@ -35,9 +36,8 @@ const OnePiece = () => {
 				<Typography>Postgre SQL</Typography>
 				<Typography>Firebase Authentication/Storage</Typography>
 			</section>
-			<section className='right'></section>
 		</>
 	);
 };
 
-export default OnePiece;
+export default Nissan;

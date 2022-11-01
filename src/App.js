@@ -5,7 +5,7 @@ import { getTheme } from './theme';
 import Footer from './Footer';
 import NavBar from './NavBar';
 import TechStack from './TechStack';
-import { OnePiece, RNProject } from './projects/';
+import { OnePiece, Nissan, RNProject } from './projects/';
 import projects from './projects/projects.json';
 import './app.css';
 import ProjectDisplayButton from './ProjectDisplayBUtton';
@@ -83,8 +83,10 @@ const App = () => {
 					<section className='project1' ref={project1Ref}>
 						<RNProject />
 					</section>
-
 					<section className='project2'>
+						<Nissan />
+					</section>
+					<section className='project3'>
 						<OnePiece />
 					</section>
 					{/* <section className='project2'>

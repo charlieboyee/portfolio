@@ -1,22 +1,22 @@
-.project3{
+.project2{
     height: 100vh;
     display: flex;
     padding: 0 5%
 }
 
-.project3 .left{
+.project2 .right{
     flex: 1
 }
 
-.project3 .left .MuiDivider-root{
+.project2 .right .MuiDivider-root{
     align-items: flex-start;
 }
-.project3 .left .MuiTypography-root{
+.project2 .right .MuiTypography-root{
     text-align: center;
 }
 
-.project3 .left #title::after{
-    content: 'One Piece';
+.project2 .right #title::after{
+    content: 'Nissan';
     text-shadow: 0px 12px 10px rgba(0, 0, 0, .3);
     display: block;
     color: rgba(0,0,0,.1);
@@ -25,7 +25,7 @@
     margin-top: 24px
 }
 
-.project3 .left .buttonsContainer{
+.project2 .right .buttonsContainer{
     position: relative;
     bottom: 13%;
     display: flex;
@@ -33,6 +33,6 @@
     justify-content: space-evenly;
 }
 
-.project3 .right{
+.project2 .left{
     flex: 1
 }
