@@ -1,5 +1,5 @@
 .contact{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -16,7 +16,8 @@
 .contact main{
     flex: 1;
     display: flex;
-    padding: 0 5%
+    padding: 0 5%;
+    flex-wrap: wrap;
 }
 
 

@@ -15,7 +15,7 @@
 			{ "Postgre SQL": "https://www.postgresql.org/" }
 		],
 		"links": {
-			"liveDemo": "https://www.google.com/",
+			"liveDemo": "https://fluffy-swan-edf656.netlify.app/",
 			"gitHub": "https://github.com/charlieboyee/photoCacher"
 		}
 	},
@@ -34,7 +34,7 @@
 			{ "Stripe JS": "https://stripe.com/docs/stripe-js/react" }
 		],
 		"links": {
-			"liveDemo": "https://www.google.com/",
+			"liveDemo": "https://fluffy-swan-edf656.netlify.app/",
 			"gitHub": "https://github.com/charlieboyee/nissan_mock"
 		}
 	}

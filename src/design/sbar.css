@@ -1,14 +1,20 @@
 
 .MuiSnackbar-root{
-    opacity: .3;
-    transition: opacity 1s ease-in-out;
+    animation: breathe 1s infinite alternate;
 }
 
 .MuiSnackbar-root:hover{
     opacity: 1;
- 
 }
 .MuiSnackbar-root .MuiSnackbarContent-root{
     
 }
 
+@keyframes breathe {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
