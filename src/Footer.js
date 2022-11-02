@@ -28,7 +28,7 @@ const Footer = () => {
 					>
 						<LinkedInIcon />
 					</IconButton>
-					<IconButton onClick={() => navigate('contact')}>
+					<IconButton onClick={() => navigate('/contact')}>
 						<EmailIcon />
 					</IconButton>
 				</section>

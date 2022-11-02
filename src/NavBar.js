@@ -26,9 +26,15 @@ const NavBar = () => {
 			<section className='right'>
 				{location?.pathname === '/' ? (
 					<>
-						<Button variant='contained'>Contact</Button>
-						<Button variant='contained'>Projects</Button>
-						<Button variant='contained'>Stats</Button>
+						<Button variant='contained' onClick={() => navigate('/about')}>
+							About
+						</Button>
+						<Button variant='contained' onClick={() => navigate('/contact')}>
+							Contact
+						</Button>
+						<Button variant='contained' onClick={() => navigate('/stats')}>
+							Stats
+						</Button>
 					</>
 				) : null}
 

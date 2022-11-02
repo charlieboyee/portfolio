@@ -1,0 +1,12 @@
+.notFound{
+    height: 100vh;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notFound .MuiTypography-root{
+    font-family: fantasy;
+    text-align: center;
+}
