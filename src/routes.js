@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
+import About from './About';
 import Contact from './Contact';
 import Landing from './Landing';
 import NotFound from './NotFound';
@@ -12,6 +13,10 @@ export const router = createBrowserRouter([
 			{
 				index: true,
 				element: <Landing />,
+			},
+			{
+				path: 'about',
+				element: <About />,
 			},
 			{
 				path: 'contact',

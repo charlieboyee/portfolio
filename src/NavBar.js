@@ -22,20 +22,17 @@ const NavBar = () => {
 				<Typography onClick={() => navigate('/')}>The Portfolio</Typography>
 			</section>
 			<section className='right'>
-				{location?.pathname === '/' ? (
-					<>
-						<Button variant='contained' onClick={() => navigate('/about')}>
-							About
-						</Button>
-						<Button variant='contained' onClick={() => navigate('/contact')}>
-							Contact
-						</Button>
-						<Button variant='contained' onClick={() => navigate('/stats')}>
-							Stats
-						</Button>
-					</>
-				) : null}
-
+				<Button variant='contained' onClick={() => navigate('/about')}>
+					About
+				</Button>
+				<Button variant='contained' onClick={() => navigate('/contact')}>
+					Contact
+				</Button>
+				{location?.pathname === '/' && (
+					<Button variant='contained' onClick={() => navigate('/stats')}>
+						Stats
+					</Button>
+				)}
 				{checked ? (
 					<IconButton
 						onClick={() => {

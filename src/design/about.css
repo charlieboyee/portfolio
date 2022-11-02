@@ -1,0 +1,12 @@
+.about{
+    height: 100vh;
+}
+
+.about .MuiTypography-root{
+    font-family: fantasy;
+}
+
+.about nav{
+    position: static;
+    opacity: 1;
+}
