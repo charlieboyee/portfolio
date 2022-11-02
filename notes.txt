@@ -1,3 +1,2 @@
-Landing page
-    -should have intro (my name, what I do [full stack], navgation to other routes
-    -
+need to add git mailer
+transfer projects.json to backend.

@@ -15,9 +15,7 @@ const NavBar = () => {
 		setChecked(e.target.checked);
 		colorMode.toggleColorMode();
 	};
-	useEffect(() => {
-		console.log(location);
-	}, []);
+
 	return (
 		<Paper component='nav'>
 			<section className='left'>
