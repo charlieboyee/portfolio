@@ -69,7 +69,7 @@ const Landing = () => {
 			<section className='techStack' ref={techStackRef}>
 				<TechStack />
 			</section>
-			{projects.length && (
+			{projects.length ? (
 				<>
 					<section className='projectsList' ref={projectsList}>
 						<Typography variant='h1'>My Projects</Typography>
@@ -95,6 +95,12 @@ const Landing = () => {
 						<Nissan project={projects[1]} />
 					</section>
 				</>
+			) : (
+				<section className='maintenance' ref={projectsList}>
+					<Typography variant='h1'>
+						This section is under maintenance
+					</Typography>
+				</section>
 			)}
 
 			<Footer />
