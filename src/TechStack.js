@@ -6,7 +6,7 @@ import POSTGREsvg from './assets/postgresql.svg';
 import NODEsvg from './assets/nodejs.svg';
 import PYTHONsvg from './assets/python.svg';
 import RNATIVEpng from './assets/react-native.png';
-import './techStack.css';
+import './design/techStack.css';
 
 const TechStack = () => {
 	const [bounceUp, setBounceUp] = useState('');

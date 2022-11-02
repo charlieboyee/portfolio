@@ -1,0 +1,35 @@
+.contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .MuiTypography-root{
+    font-family: fantasy;
+}
+
+.contact nav{
+    position: static;
+    opacity: 1;
+}
+
+
+.contact main{
+    flex: 1;
+    display: flex;
+}
+
+
+.contact main .left{
+    flex: 1;
+}
+
+.contact main .right{
+    flex: 1;
+    
+}
+
+.contact main .right footer{
+    flex: 1;
+    
+}

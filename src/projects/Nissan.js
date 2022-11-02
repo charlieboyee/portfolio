@@ -1,10 +1,15 @@
 import { Button, Divider, Chip, Typography } from '@mui/material';
+import NissanDemo from '../assets/nissanMockDemo.mp4';
 import './nissan.css';
 
 const Nissan = ({ project }) => {
 	return (
 		<>
-			<section className='left'>somthing header</section>
+			<section className='left'>
+				<video autoPlay loop muted>
+					<source src={NissanDemo} type='video/mp4' />
+				</video>
+			</section>
 			<section className='right'>
 				<Typography id='title' variant='h1'>
 					{project.title}
@@ -27,13 +32,13 @@ const Nissan = ({ project }) => {
 				</div>
 				<Typography variant='h4'>{project.header}</Typography>
 				<Divider flexItem>
-					<Chip label='Features'>Features</Chip>
+					<Chip label='Features' />
 				</Divider>
 				{project.features.map((text, key) => {
 					return <Typography key={key}>{text}</Typography>;
 				})}
 				<Divider flexItem>
-					<Chip label='Tech Stack'>Tech Stack</Chip>
+					<Chip label='Tech Stack' />
 				</Divider>
 				<div className='techUsed'>
 					{project.techStack.map((tech, key) => {

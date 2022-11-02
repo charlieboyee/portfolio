@@ -47,13 +47,13 @@ const RNProject = ({ project }) => {
 				</div>
 				<Typography variant='h4'>{project.header}</Typography>
 				<Divider flexItem>
-					<Chip label='Features'>Features</Chip>
+					<Chip label='Features' />
 				</Divider>
 				{project.features.map((text, key) => {
 					return <Typography key={key}>{text}</Typography>;
 				})}
 				<Divider flexItem>
-					<Chip label='Tech Stack'>Tech Stack</Chip>
+					<Chip label='Tech Stack' />
 				</Divider>
 				<div className='techUsed'>
 					{project.techStack.map((tech, key) => {
@@ -82,7 +82,7 @@ const RNProject = ({ project }) => {
 								Pause
 							</Button>
 						</div>
-						<video ref={vidRef} autoPlay muted>
+						<video ref={vidRef} autoPlay loop muted>
 							<source src={RNativeVid} type='video/mp4' />
 						</video>
 					</div>

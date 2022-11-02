@@ -1,34 +1,55 @@
 import { useState, useContext, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Button, IconButton, Switch, Paper, Typography } from '@mui/material';
 import BulbOn from './assets/lightBulbOn.png';
 import BulbOff from './assets/lightBulbOff.png';
-import './navBar.css';
+import './design/navBar.css';
 import { ColorContext } from './App';
 const NavBar = () => {
+	const navigate = useNavigate();
+	const location = useLocation();
+
 	const { colorMode } = useContext(ColorContext);
 	const [checked, setChecked] = useState(false);
 	const handleChange = (e) => {
 		setChecked(e.target.checked);
-	};
-
-	useEffect(() => {
 		colorMode.toggleColorMode();
-	}, [checked]);
+	};
+	useEffect(() => {
+		console.log(location);
+	}, []);
 	return (
 		<Paper component='nav'>
-			<section>
-				<Typography>The Portfolio</Typography>
+			<section className='left'>
+				<Typography onClick={() => navigate('/')}>The Portfolio</Typography>
 			</section>
-			<section>
-				<Button variant='contained'>Contact</Button>
-				<Button variant='contained'>Projects</Button>
-				<Button variant='contained'>Stats</Button>
+			<section className='right'>
+				{location?.pathname === '/' ? (
+					<>
+						<Button variant='contained'>Contact</Button>
+						<Button variant='contained'>Projects</Button>
+						<Button variant='contained'>Stats</Button>
+					</>
+				) : null}
+
 				{checked ? (
-					<IconButton onClick={() => setChecked(!checked)} disableRipple>
+					<IconButton
+						onClick={() => {
+							colorMode.toggleColorMode();
+							setChecked(!checked);
+						}}
+						disableRipple
+					>
 						<img src={BulbOn} alt='lightBulbOn' />
 					</IconButton>
 				) : (
-					<IconButton onClick={() => setChecked(!checked)} disableRipple>
+					<IconButton
+						onClick={() => {
+							colorMode.toggleColorMode();
+							setChecked(!checked);
+						}}
+						disableRipple
+					>
 						<img src={BulbOff} alt='lightBulbOff' />
 					</IconButton>
 				)}

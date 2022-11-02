@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import { useContext } from 'react';
 import { ColorContext } from './App';
-import './projectDisplayButton.css';
+import './design/projectDisplayButton.css';
 const ProjectDisplay = ({ title, projectRefs, index }) => {
 	const { mode } = useContext(ColorContext);
 	return (

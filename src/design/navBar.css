@@ -1,0 +1,35 @@
+nav{
+    position: sticky;   
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    padding:0 2%;
+    opacity: 0;
+}
+
+nav:hover{
+    transition: all .5s ease-in-out;
+    opacity: 1;
+}
+
+nav .left .MuiTypography-root{
+    cursor: pointer;
+    font-family: fantasy;
+}
+
+
+nav .MuiButton-root{
+    margin: 0 12px;
+    color: white
+}
+
+nav .MuiIconButton-root img{
+    width: 24px;
+    object-fit: contain;
+}
+
+nav .MuiSwitch-root{
+    display: none;
+}
