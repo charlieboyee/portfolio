@@ -20,7 +20,7 @@
 	overflow: hidden;
   white-space: nowrap;
   animation: type 3s steps(50) forwards, blink 1s infinite;
-  border-right: 1px solid orange;
+  border-right: 1px solid orange;  
 }
 
 .landing .intro .MuiButton-root{

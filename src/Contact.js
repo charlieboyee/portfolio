@@ -59,7 +59,7 @@ const CustomTextField = (props) => {
 const ConfirmationModal = ({ message }) => {
 	return (
 		<Modal id='emailConfirmationModal' open={Boolean(message)}>
-			<Card elevation={24}>
+			<Card elevation={24} className={message ? 'open' : ''}>
 				<CardContent>
 					<Typography variant='h3'>{message}</Typography>
 					{message?.includes('wrong') ? (

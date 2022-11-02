@@ -1,10 +1,9 @@
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Button, Paper, Typography } from '@mui/material';
 import Footer from './Footer';
 import TechStack from './TechStack';
 import NavBar from './NavBar';
 import { Nissan, RNProject } from './projects/';
-import projects from './projects/projects.json';
 import ProjectDisplayButton from './ProjectDisplayBUtton';
 import './design/landing.css';
 
@@ -13,6 +12,9 @@ const Landing = () => {
 	const techStackRef = useRef();
 	const project1Ref = useRef();
 	const project2Ref = useRef();
+
+	const [projects, setProjects] = useState([]);
+
 	const goToProjects = () => {
 		projectsList.current.scrollIntoView({ behavior: 'smooth' });
 	};
@@ -20,6 +22,20 @@ const Landing = () => {
 	const goToTechStack = () => {
 		techStackRef.current.scrollIntoView({ behavior: 'smooth' });
 	};
+	const getProjects = async () => {
+		try {
+			const result = await fetch(`${process.env.REACT_APP_URL}projects`);
+			if (result.status === 200) {
+				const { data } = await result.json();
+				setProjects(data);
+			}
+		} catch (err) {
+			console.log(err);
+		}
+	};
+	useEffect(() => {
+		getProjects();
+	}, []);
 
 	return (
 		<Paper className='landing'>
@@ -53,29 +69,33 @@ const Landing = () => {
 			<section className='techStack' ref={techStackRef}>
 				<TechStack />
 			</section>
-			<section className='projectsList' ref={projectsList}>
-				<Typography variant='h1'>My Projects</Typography>
-				<div>
-					{projects.map((proj, key) => {
-						return (
-							<ProjectDisplayButton
-								key={key}
-								title={proj.title}
-								projectRefs={[project1Ref, project2Ref]}
-								index={key}
-							/>
-						);
-					})}
-				</div>
-			</section>
+			{projects.length && (
+				<>
+					<section className='projectsList' ref={projectsList}>
+						<Typography variant='h1'>My Projects</Typography>
+						<div>
+							{projects?.map((proj, key) => {
+								return (
+									<ProjectDisplayButton
+										key={key}
+										title={proj?.title}
+										projectRefs={[project1Ref, project2Ref]}
+										index={key}
+									/>
+								);
+							})}
+						</div>
+					</section>
 
-			<section className='project1' ref={project1Ref}>
-				<RNProject project={projects[0]} />
-			</section>
+					<section className='project1' ref={project1Ref}>
+						<RNProject project={projects[0]} />
+					</section>
 
-			<section className='project2' ref={project2Ref}>
-				<Nissan project={projects[1]} />
-			</section>
+					<section className='project2' ref={project2Ref}>
+						<Nissan project={projects[1]} />
+					</section>
+				</>
+			)}
 
 			<Footer />
 		</Paper>

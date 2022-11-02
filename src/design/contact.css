@@ -78,6 +78,11 @@
     justify-content: center;
 }
 
+#emailConfirmationModal .MuiCard-root.open{
+    animation: zoom .5s linear alternate;
+
+}
+
 #emailConfirmationModal .MuiCard-root .MuiCardContent-root{
     text-align: center;
     font-size: 5em;
@@ -90,4 +95,46 @@
 #emailConfirmationModal .MuiCard-root .MuiTypography-root{
     font-size: 1em;
     text-align: center;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1)
+
+    }
+    10%{
+        transform: scale(.5)
+
+    }
+    20%{
+        transform: scale(.3)
+
+    }
+    30%{
+        transform: scale(.2)
+
+    }
+    40%{
+        transform: scale(.5)
+
+    }
+    50%{
+        transform: scale(.7)
+
+    }
+    60%{
+        transform: scale(1)
+        
+    }
+    70%{
+        transform: scale(1.2)
+
+    }
+    80%{
+        transform: scale(1.5)
+        
+    }
+    100%{
+        transform: scale(1)
+    }
 }
