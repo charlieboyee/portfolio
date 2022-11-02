@@ -16,6 +16,7 @@
 .contact main{
     flex: 1;
     display: flex;
+    padding: 0 5%
 }
 
 
@@ -23,18 +24,38 @@
     flex: 2;
 }
 
+.contact main .left .MuiCard-root{
+    opacity: .9;
+}
+
+.contact main .left .textFields{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contact main .left .MuiCard-root .MuiButton-root{
+    float: right;
+}
+
+.contact main .left .textFields > .MuiTextField-root{
+    margin: 12px 0
+}
+
 .contact main .right{
     flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 5%;
 
+}
+
+.contact main .right .MuiTypography-root{
+   text-align: center;
 }
 
 .contact main .right footer .top{
     flex-direction: column;
-}
-
-.contact main{
-   
 }
