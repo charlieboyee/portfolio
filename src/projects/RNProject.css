@@ -1,7 +1,7 @@
 .project1{
     height: 100vh;
     overflow: hidden;
-    display: flex;
+    display: flex !important;
 }
 
 .project1 .left{
