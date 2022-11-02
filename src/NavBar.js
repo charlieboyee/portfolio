@@ -1,5 +1,5 @@
-import { useState, useContext, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, IconButton, Switch, Paper, Typography } from '@mui/material';
 import BulbOn from './assets/lightBulbOn.png';
 import BulbOff from './assets/lightBulbOff.png';
@@ -7,7 +7,6 @@ import './design/navBar.css';
 import { ColorContext } from './App';
 const NavBar = () => {
 	const navigate = useNavigate();
-	const location = useLocation();
 
 	const { colorMode } = useContext(ColorContext);
 	const [checked, setChecked] = useState(false);
@@ -28,11 +27,7 @@ const NavBar = () => {
 				<Button variant='contained' onClick={() => navigate('/contact')}>
 					Contact
 				</Button>
-				{location?.pathname === '/' && (
-					<Button variant='contained' onClick={() => navigate('/stats')}>
-						Stats
-					</Button>
-				)}
+
 				{checked ? (
 					<IconButton
 						onClick={() => {

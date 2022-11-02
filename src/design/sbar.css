@@ -1,0 +1,14 @@
+
+.MuiSnackbar-root{
+    opacity: .3;
+    transition: opacity 1s ease-in-out;
+}
+
+.MuiSnackbar-root:hover{
+    opacity: 1;
+ 
+}
+.MuiSnackbar-root .MuiSnackbarContent-root{
+    
+}
+

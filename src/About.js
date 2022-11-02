@@ -13,7 +13,17 @@ const CustomCard = (props) => {
 	console.log(props);
 	return (
 		<Card className='cards' raised elevation={24} sx={props.sx}>
-			{props.children}
+			<CardContent>
+				<Typography variant='h4'>{props.title}</Typography>
+
+				{props.listItems.map((i, key) => {
+					return (
+						<Typography variant='h6' component='li' key={key}>
+							{i}
+						</Typography>
+					);
+				})}
+			</CardContent>
 		</Card>
 	);
 };
@@ -82,62 +92,48 @@ const About = () => {
 					<Typography variant='h2'>Education</Typography>
 					<CustomCard
 						sx={{ backgroundColor: 'primary.dark', color: 'common.white' }}
-					>
-						<CardContent>
-							<Typography variant='h4'>Coding Experience</Typography>
-							<Typography variant='h6' component='li'>
-								React
-							</Typography>
-							<Typography variant='h6' component='li'>
-								React Native w/ Expo
-							</Typography>
-							<Typography variant='h6' component='li'>
-								Auth Services (Firebase and some AWS)
-							</Typography>
-							<Typography variant='h6' component='li'>
-								SQL/PostgreSQL
-							</Typography>
-							<Typography variant='h6' component='li'>
-								Nodejs w/Express.js
-							</Typography>
-							<Typography variant='h6' component='li'>
-								JS, HTML, CSS (Material UI for design)
-							</Typography>
-						</CardContent>
-					</CustomCard>
+						title='Coding Experience'
+						listItems={[
+							'React',
+							'React Native w/ Expo',
+							'Auth Services (Firebase and some AWS)',
+							'SQL/PostgreSQL',
+							'Nodejs w/Express.js',
+							'JS, HTML, CSS (Material UI for design)',
+						]}
+					/>
+
 					<CustomCard
 						sx={{ backgroundColor: 'secondary.dark', color: 'common.white' }}
-					>
-						<CardContent>
-							<Typography variant='h4'>
-								CSUN (California State University of Northridge)
-							</Typography>
+						title='CSUN (California State University of Northridge)'
+						listItems={['B.S. (Hospitality & Recreation Management)']}
+					/>
 
-							<Typography variant='h6' component='li'>
-								B.S. (Hospitality & Recreation Management)
-							</Typography>
-						</CardContent>
-					</CustomCard>
+					<Typography variant='h2'>Projects</Typography>
+					<CustomCard
+						sx={{ backgroundColor: 'primary.dark', color: 'common.white' }}
+						title='Personal Projects'
+						listItems={[]}
+					/>
+
+					<CustomCard
+						sx={{ backgroundColor: 'secondary.dark', color: 'common.white' }}
+						title='Professional Projects'
+						listItems={[]}
+					/>
 					<Typography variant='h2'>Interests</Typography>
 
 					<CustomCard
-						sx={{ backgroundColor: 'secondary.main', color: 'common.white' }}
-					>
-						<CardContent>
-							<Typography variant='h6' component='li'>
-								Cars
-							</Typography>
-							<Typography variant='h6' component='li'>
-								Photography
-							</Typography>
-							<Typography variant='h6' component='li'>
-								Hiking
-							</Typography>
-							<Typography variant='h6' component='li'>
-								Biking
-							</Typography>
-						</CardContent>
-					</CustomCard>
+						sx={{ backgroundColor: 'primary.dark', color: 'common.white' }}
+						title=''
+						listItems={[
+							'Cars',
+							'Photography',
+							'Hiking',
+							'SQL/PostgreSQL',
+							'Biking',
+						]}
+					/>
 				</section>
 				<section className='right'>
 					{/* fill this are with leet code and hacker rank question stats */}

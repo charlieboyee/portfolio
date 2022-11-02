@@ -2,6 +2,7 @@ import { useState, createContext, useMemo } from 'react';
 import { Outlet } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { getTheme } from './theme';
+import Sbar from './Sbar';
 
 export const ColorContext = createContext({ toggleColorMode: () => {} });
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
 		<ColorContext.Provider value={{ colorMode, mode }}>
 			<ThemeProvider theme={appTheme}>
 				<Outlet />
+				<Sbar />
 			</ThemeProvider>
 		</ColorContext.Provider>
 	);
