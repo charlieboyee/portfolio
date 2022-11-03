@@ -1,3 +1,10 @@
+
+@media screen and (max-width:1050px ){
+    .project1{
+        flex-direction: column;
+        overflow: auto;
+    }
+}
 section.project1{
     min-height: 100vh;
     overflow: hidden;
@@ -99,11 +106,4 @@ section.project1{
 
 .project1 .phone .panel.front .vidControls .MuiButton-root{
     z-index: 99;
-}
-
-@media screen and (max-width:1050px ){
-    .project1{
-        flex-direction: column;
-        overflow: auto;
-    }
 }
