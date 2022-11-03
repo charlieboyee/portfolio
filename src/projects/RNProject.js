@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Button, Divider, Chip, Typography } from '@mui/material';
-import '../design/RNProject.css';
+import './RNProject.css';
 import RNativeVid from '../assets/RNativeProject.mp4';
 
 const RNProject = ({ project }) => {
