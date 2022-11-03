@@ -1,7 +1,8 @@
 .project2{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    padding: 0 5%
+    padding: 0 5%;
+    flex-wrap: wrap-reverse;
 }
 
 .project2 .right{
@@ -65,5 +66,6 @@
 }
 
 .project2 video{
-    width: 100%;
+    min-width: 400px;
+    width: 100%
 }

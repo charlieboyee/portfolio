@@ -1,14 +1,9 @@
 
-@media screen and (max-width:1050px ){
-    .project1{
-        flex-direction: column;
-        overflow: auto;
-    }
-}
 section.project1{
     min-height: 100vh;
     overflow: hidden;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .project1 .left{

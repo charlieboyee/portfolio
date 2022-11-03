@@ -10,7 +10,6 @@ import './design/about.css';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const CustomCard = (props) => {
-	console.log(props);
 	return (
 		<Card className='cards' raised elevation={24} sx={props.sx}>
 			<CardContent>

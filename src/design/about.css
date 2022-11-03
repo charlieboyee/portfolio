@@ -15,7 +15,8 @@
 .about main{
     display: flex;
     flex: 1;
-    padding: 2% 5% 0
+    padding: 2% 5% 0;
+    flex-wrap: wrap;
 }
 
 .about main .left,
@@ -53,4 +54,15 @@
  
 .about li{
     text-indent: 1em;
+}
+
+@media screen and (max-width: 600px) {
+    .about main .left .cards:hover{
+        transform: none;
+    transition: unset
+    }
+    .about main .left .cards:last-of-type:hover{
+        transform: none;
+    transition: unset
+    }
 }
