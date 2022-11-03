@@ -5,7 +5,7 @@ import TechStack from './TechStack';
 import NavBar from './NavBar';
 import { Nissan, RNProject } from './projects/';
 import ProjectDisplayButton from './ProjectDisplayBUtton';
-import './landing.css';
+import './design/landing.css';
 
 const Landing = () => {
 	const projectsList = useRef();

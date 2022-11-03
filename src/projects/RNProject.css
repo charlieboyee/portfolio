@@ -1,9 +1,3 @@
-.project1{
-    min-height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-  }
 
 .project1 .left{
     flex: 1;
