@@ -49,7 +49,7 @@ background-image: linear-gradient(45deg, rgb(243, 166, 23) 25%, transparent 25%,
 }
 
 
-.landign section.project1{
+.landing section.project1{
   min-height: 100vh;
   overflow: hidden;
   display: flex;
