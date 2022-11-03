@@ -112,7 +112,7 @@ const About = () => {
 					<CustomCard
 						sx={{ backgroundColor: 'primary.dark', color: 'common.white' }}
 						title='Personal Projects'
-						listItems={[]}
+						listItems={['Nissan, Photo Cacher']}
 					/>
 
 					<CustomCard
