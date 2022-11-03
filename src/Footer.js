@@ -19,7 +19,7 @@ const Footer = () => {
 				</section>
 
 				<section className='socialLinks'>
-					<IconButton href='https://github.com/' target='_blank'>
+					<IconButton href='https://github.com/charlieboyee' target='_blank'>
 						<GitHubIcon />
 					</IconButton>
 					<IconButton
