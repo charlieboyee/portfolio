@@ -55,14 +55,3 @@
 .about li{
     text-indent: 1em;
 }
-
-@media screen and (max-width: 600px) {
-    .about main .left .cards:hover{
-        transform: none;
-    transition: unset
-    }
-    .about main .left .cards:last-of-type:hover{
-        transform: none;
-    transition: unset
-    }
-}
