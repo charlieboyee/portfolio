@@ -129,7 +129,7 @@ const About = () => {
 							'Cars',
 							'Photography',
 							'Hiking',
-							'SQL/PostgreSQL',
+							'Fishing',
 							'Biking',
 						]}
 					/>
