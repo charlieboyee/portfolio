@@ -67,7 +67,7 @@ const About = () => {
 					if (item !== undefined) {
 						Object.keys(item).forEach((lang, k) => {
 							if (countObj[lang] === undefined) {
-								countObj[lang] = 0;
+								countObj[lang] = 1;
 							} else {
 								countObj[lang] += 1;
 							}
@@ -125,13 +125,7 @@ const About = () => {
 					<CustomCard
 						sx={{ backgroundColor: 'primary.dark', color: 'common.white' }}
 						title=''
-						listItems={[
-							'Cars',
-							'Photography',
-							'Hiking',
-							'Fishing',
-							'Biking',
-						]}
+						listItems={['Cars', 'Photography', 'Hiking', 'Fishing', 'Biking']}
 					/>
 				</section>
 				<section className='right'>
